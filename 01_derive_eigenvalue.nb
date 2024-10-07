@@ -1,0 +1,197 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6264,        189]
+NotebookOptionsPosition[      5324,        167]
+NotebookOutlinePosition[      5726,        183]
+CellTagsIndexPosition[      5683,        180]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Here we describe the derivation of the leading eigenvalue of the transition \
+matrix for a mutant population in a two-patch system.\
+\>", "Text",
+ CellChangeTimes->{{3.9372793314781017`*^9, 3.937279365346377*^9}, {
+  3.937279561234694*^9, 
+  3.937279564590351*^9}},ExpressionUUID->"8155dedc-bba8-464d-a8c7-\
+462ceb8ee03b"],
+
+Cell["\<\
+The transition matrix depends on a migration and a reproduction matrix.\
+\>", "Text",
+ CellChangeTimes->{{3.937279449412581*^9, 
+  3.937279460695237*^9}},ExpressionUUID->"0cb23f17-e133-4788-ad63-\
+eebdf6abc85e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Migration", " ", "matrix"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"M", "=", 
+     RowBox[{"(", "\[NoBreak]", GridBox[{
+        {
+         RowBox[{"1", "-", "m"}], "m"},
+        {"m", 
+         RowBox[{"1", "-", "m"}]}
+       }], "\[NoBreak]", ")"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Reproduction", " ", "matrix"}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"R", "=", 
+     RowBox[{"(", "\[NoBreak]", GridBox[{
+        {
+         SubscriptBox["W", "1"], "0"},
+        {"0", 
+         SubscriptBox["W", "2"]}
+       }], "\[NoBreak]", ")"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Transition", " ", "matrix"}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"\[CapitalLambda]", "=", 
+    RowBox[{"M", ".", "R"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.937276703362253*^9, 3.9372767810498238`*^9}, {
+  3.9372794626601753`*^9, 
+  3.9372794883143883`*^9}},ExpressionUUID->"39f3c5b7-5c32-4382-a23c-\
+8884371107f5"],
+
+Cell["The eigenvalues of this transition matrix are:", "Text",
+ CellChangeTimes->{{3.937279495715708*^9, 
+  3.9372795078880253`*^9}},ExpressionUUID->"98071f76-1beb-46b5-ab6b-\
+c4b21a10df38"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", "Eigenvalues", " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Eigenvalues", "[", "\[CapitalLambda]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.937276855915752*^9, 3.93727686318528*^9}, {
+  3.937279513036899*^9, 
+  3.937279520311998*^9}},ExpressionUUID->"cd9bd3da-760e-4330-a288-\
+aa061ce76a9a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["W", "1"], "-", 
+      RowBox[{"m", " ", 
+       SubscriptBox["W", "1"]}], "+", 
+      SubscriptBox["W", "2"], "-", 
+      RowBox[{"m", " ", 
+       SubscriptBox["W", "2"]}], "-", 
+      RowBox[{"\[Sqrt]", 
+       RowBox[{"(", 
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             SubscriptBox["W", "1"]}], "+", 
+            RowBox[{"m", " ", 
+             SubscriptBox["W", "1"]}], "-", 
+            SubscriptBox["W", "2"], "+", 
+            RowBox[{"m", " ", 
+             SubscriptBox["W", "2"]}]}], ")"}], "2"], "-", 
+         RowBox[{"4", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SubscriptBox["W", "1"], " ", 
+             SubscriptBox["W", "2"]}], "-", 
+            RowBox[{"2", " ", "m", " ", 
+             SubscriptBox["W", "1"], " ", 
+             SubscriptBox["W", "2"]}]}], ")"}]}]}], ")"}]}]}], ")"}]}], ",", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["W", "1"], "-", 
+      RowBox[{"m", " ", 
+       SubscriptBox["W", "1"]}], "+", 
+      SubscriptBox["W", "2"], "-", 
+      RowBox[{"m", " ", 
+       SubscriptBox["W", "2"]}], "+", 
+      RowBox[{"\[Sqrt]", 
+       RowBox[{"(", 
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             SubscriptBox["W", "1"]}], "+", 
+            RowBox[{"m", " ", 
+             SubscriptBox["W", "1"]}], "-", 
+            SubscriptBox["W", "2"], "+", 
+            RowBox[{"m", " ", 
+             SubscriptBox["W", "2"]}]}], ")"}], "2"], "-", 
+         RowBox[{"4", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SubscriptBox["W", "1"], " ", 
+             SubscriptBox["W", "2"]}], "-", 
+            RowBox[{"2", " ", "m", " ", 
+             SubscriptBox["W", "1"], " ", 
+             SubscriptBox["W", "2"]}]}], ")"}]}]}], ")"}]}]}], ")"}]}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.937276863875618*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"2c46cc45-5862-4677-b0cf-55a7d8e2bc97"]
+}, Open  ]],
+
+Cell["\<\
+Of those, the latter (the leading eigenvalue) is the long-term growth rate of \
+the mutant.\
+\>", "Text",
+ CellChangeTimes->{{3.9372795245222063`*^9, 
+  3.937279551996655*^9}},ExpressionUUID->"f47cbcc2-9411-48fe-9808-\
+f5e062abc110"]
+},
+WindowSize->{397.5, 424.875},
+WindowMargins->{{246.75, Automatic}, {52.5, Automatic}},
+FrontEndVersion->"12.1 for Linux x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"e947baaa-bc86-4e41-a607-6bb989398274"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 332, 7, 81, "Text",ExpressionUUID->"8155dedc-bba8-464d-a8c7-462ceb8ee03b"],
+Cell[893, 29, 221, 5, 58, "Text",ExpressionUUID->"0cb23f17-e133-4788-ad63-eebdf6abc85e"],
+Cell[1117, 36, 1143, 33, 206, "Input",ExpressionUUID->"39f3c5b7-5c32-4382-a23c-8884371107f5"],
+Cell[2263, 71, 190, 3, 35, "Text",ExpressionUUID->"98071f76-1beb-46b5-ab6b-c4b21a10df38"],
+Cell[CellGroupData[{
+Cell[2478, 78, 339, 7, 51, "Input",ExpressionUUID->"cd9bd3da-760e-4330-a288-aa061ce76a9a"],
+Cell[2820, 87, 2242, 69, 178, "Output",ExpressionUUID->"2c46cc45-5862-4677-b0cf-55a7d8e2bc97"]
+}, Open  ]],
+Cell[5077, 159, 243, 6, 58, "Text",ExpressionUUID->"f47cbcc2-9411-48fe-9808-f5e062abc110"]
+}
+]
+*)
+
